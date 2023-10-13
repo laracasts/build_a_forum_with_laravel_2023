@@ -26,12 +26,7 @@
             </div>
             <div>
                 <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm bg-white" aria-label="Pagination">
-                    <Link :href="previousUrl"
-                          class="relative inline-flex items-center first-of-type:rounded-l-md last-of-type:rounded-r-md px-3 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0"
-                    >
-                        Previous
-                    </Link>
-                    <Link v-for="link in links"
+                    <Link v-for="link in meta.links"
                           :href="link.url"
                           class="relative inline-flex items-center first-of-type:rounded-l-md last-of-type:rounded-r-md px-3 py-2"
                           :class="{
@@ -40,11 +35,6 @@
                        }"
                           v-html="link.label"
                     >
-                    </Link>
-                    <Link :href="nextUrl"
-                          class="relative inline-flex items-center first-of-type:rounded-l-md last-of-type:rounded-r-md px-3 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0"
-                    >
-                        Next
                     </Link>
                 </nav>
             </div>
@@ -59,7 +49,6 @@ import {computed} from "vue";
 
 const props = defineProps(['meta']);
 
-const links = computed(() => props.meta.links.slice(1, -1));
 const previousUrl = computed(() => props.meta.links[0].url);
 const nextUrl = computed(() => [...props.meta.links].reverse()[0].url);
 </script>
