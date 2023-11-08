@@ -3,12 +3,12 @@
         <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
             <img :src="comment.user.profile_photo_url" class="h-10 w-10 rounded-full" />
         </div>
-        <div>
+        <div class="flex-1">
             <p class="mt-1 break-all">{{ comment.body }}</p>
             <span class="first-letter:uppercase block pt-1 text-xs text-gray-600">By {{ comment.user.name }} {{ relativeDate(comment.created_at) }} ago</span>
-            <div class="mt-1">
-                <form v-if="comment.can?.delete" @submit.prevent="deleteComment">
-                    <button>Delete</button>
+            <div class="mt-2 text-right empty:hidden">
+                <form v-if="comment.can?.delete" @submit.prevent="$emit('delete', comment.id)">
+                    <button class="font-mono text-red-700 text-xs hover:font-semibold">Delete</button>
                 </form>
             </div>
         </div>
@@ -22,7 +22,5 @@ import {computed} from "vue";
 
 const props = defineProps(['comment']);
 
-const deleteComment = () => router.delete(route('comments.destroy', props.comment.id), {
-    preserveScroll: true,
-});
+const emit = defineEmits(['delete']);
 </script>
