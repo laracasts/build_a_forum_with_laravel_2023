@@ -41,7 +41,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::resource('posts', PostController::class)->only(['store']);
+    Route::resource('posts', PostController::class)->only(['create', 'store']);
     Route::resource('posts.comments', CommentController::class)->shallow()->only(['store', 'update', 'destroy']);
 });
 
