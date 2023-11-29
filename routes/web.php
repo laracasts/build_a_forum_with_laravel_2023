@@ -45,5 +45,6 @@ Route::middleware([
     Route::resource('posts.comments', CommentController::class)->shallow()->only(['store', 'update', 'destroy']);
 });
 
-Route::resource('posts', PostController::class)->only(['index', 'show']);
+Route::get('posts/{post}/{slug?}', [PostController::class, 'show'])->name('posts.show');
+Route::resource('posts', PostController::class)->only(['index']);
 
