@@ -22,10 +22,12 @@
     },
     "dependencies": {
         "@heroicons/vue": "^2.0.18",
+        "@tiptap/extension-link": "^2.1.13",
         "@tiptap/pm": "^2.1.13",
         "@tiptap/starter-kit": "^2.1.13",
         "@tiptap/vue-3": "^2.1.13",
         "date-fns": "^2.30.0",
+        "remixicon": "^3.6.0",
         "tiptap-markdown": "^0.8.7"
     }
 }
