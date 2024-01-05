@@ -23,6 +23,7 @@
     "dependencies": {
         "@heroicons/vue": "^2.0.18",
         "@tiptap/extension-link": "^2.1.13",
+        "@tiptap/extension-placeholder": "^2.1.13",
         "@tiptap/pm": "^2.1.13",
         "@tiptap/starter-kit": "^2.1.13",
         "@tiptap/vue-3": "^2.1.13",
