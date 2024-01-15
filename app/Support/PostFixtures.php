@@ -20,5 +20,4 @@ class PostFixtures
                 'body' => str($parts[1])->trim(),
             ]);
     }
-
 }

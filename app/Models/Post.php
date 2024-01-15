@@ -12,8 +12,8 @@ use Illuminate\Support\Str;
 
 class Post extends Model
 {
-    use HasFactory;
     use ConvertsMarkdownToHtml;
+    use HasFactory;
 
     public function user(): BelongsTo
     {

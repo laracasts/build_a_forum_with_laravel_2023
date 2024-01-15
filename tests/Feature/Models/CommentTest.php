@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Comment;
-use App\Models\Post;
 
 it('generates the html', function () {
     $comment = Comment::factory()->make(['body' => '## Hello world']);

@@ -8,4 +8,5 @@ Route::middleware('api')->group(function () {
     });
 });
 
-Route::middleware('web')->group(function () {});
+Route::middleware('web')->group(function () {
+});
