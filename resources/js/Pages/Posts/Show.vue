@@ -26,8 +26,8 @@
                 >
                     <div>
                         <InputLabel for="body" class="sr-only"
-                            >Comment</InputLabel
-                        >
+                            >Comment
+                        </InputLabel>
                         <MarkdownEditor
                             ref="commentTextAreaRef"
                             id="body"
