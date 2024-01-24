@@ -17,7 +17,7 @@ it('can show a post', function () {
 it('passes a post to the view', function () {
     $post = Post::factory()->create();
 
-    $post->load('user');
+    $post->load('user', 'topic');
 
     get($post->showRoute())
         ->assertHasResource('post', PostResource::make($post));
