@@ -10,7 +10,6 @@
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/jetstream": "^5.0",
-        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.8",
         "tightenco/ziggy": "^1.0"
     },
